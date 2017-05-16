@@ -1,0 +1,30 @@
+<html>
+<head>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/dygraph/2.0.0/dygraph.min.js"></script>
+    <link rel="stylesheet" src="//cdnjs.cloudflare.com/ajax/libs/dygraph/2.0.0/dygraph.min.css"/>
+</head>
+<body>
+
+<style> .dygraph-legend { text-align: right; }</style>
+<h1>Juste prix</h1>
+
+<!--<h2>Number of servers seen by the bot</h2>-->
+<div id="stats"
+     style="height:500px;"></div>
+<script type="text/javascript">
+    g1 = new Dygraph(
+        document.getElementById("stats"),
+        "results/1904EX4Q2.csv", // path to CSV file
+        {
+            title: 'Comparaison des deux m&eacutethodes',
+            ylabel: 'Nombre de coups',
+            legend: 'always',
+            showRangeSelector: true,
+            labelsKMB: true
+        }          // options
+    );
+</script>
+
+</body>
+</html>
